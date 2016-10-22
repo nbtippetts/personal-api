@@ -1,0 +1,23 @@
+{
+  "name": "personal-api",
+  "version": "1.0.0",
+  "description": "personal API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbtippetts/personal-api.git"
+  },
+  "author": "Noah Tippetts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nbtippetts/personal-api/issues"
+  },
+  "homepage": "https://github.com/nbtippetts/personal-api#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}
