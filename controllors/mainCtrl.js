@@ -120,10 +120,28 @@ module.exports = {
   addOccupation: function(req, res){
         if (res.body.occupations){
           users.occupations.push(req.body.occupations);
-          res.status(200).json(users.occupations);
+          res.status(200).send({occupations: users.occupations});
         } else {
           console.log('Go home you are drunk');
         }
+   },
+
+   addFamily: function(req, res){
+     if (res.body.family){
+       users.family.push(res.body.family);
+       res.status(200).send({family: users.family});
+     } else {
+       console.log('No')
+     }
+   },
+
+   addRestaurants: function(req, res){
+     if (res.body.restaurants){
+       users.restaurants.push(res.body.restaurants);
+       res.status(200).send({restaurants: users.restaurants});
+     } else {
+       console.log('That restaurant sucks')
+     }
    },
 
 

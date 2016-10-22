@@ -43,6 +43,24 @@ var mainCtrl = require('./controllors/mainCtrl.js');
 
   app.post('/occupation', mainCtrl.addOccupation);
 
+  app.post('/family', mainCtrl.addFamily);
+
+  app.post('/restaurants', mainCtrl.addRestaurants);
+
+  app.get('/skills', function(req, res) {
+    res.json(skills);
+  });
+
+  app.get('/skills:param', function(req, res) {
+    if(skills[skills.indexOf(req.params.param)]) res.json(skills[skills.indexOf(req.params.param)]);
+    res.json('Sorry that\'s not a thing.');
+  });
+
+  app.post('/skills', function(req, res) {
+    skills.push(req.body);
+    res.json(skills);
+   });
+
 
   app.listen(8887, function() {
     console.log('Listening on port 8887');

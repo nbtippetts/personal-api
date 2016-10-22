@@ -49,6 +49,13 @@ var users = {
         rating: 8
       }
     ]
-    }
+    skills: [
+      {
+  "id": 1,
+  "name": "Javascript",
+  "experience": "Intermediate"
+      }
+    ]
+  }
 
     module.exports = users;
